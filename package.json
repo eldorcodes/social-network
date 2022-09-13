@@ -1,0 +1,30 @@
+{
+  "name": "social-network",
+  "version": "1.0.0",
+  "description": "Social Media Web Application by JavaScript and jQuery",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "engines": {
+    "node": "16.17.0",
+    "npm":"8.19.1"
+  },
+  "author": "Eldor Togaymurotov",
+  "license": "ISC",
+  "dependencies": {
+    "@handlebars/allow-prototype-access": "^1.0.5",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mongoose": "^6.5.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.1"
+  }
+}

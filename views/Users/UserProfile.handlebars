@@ -1,0 +1,16 @@
+<div class="container">
+    <div>
+        <div class="card" style="width: 18rem;">
+        <img src="/images/user-logo.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{userData.username}}</h5>
+            {{#if userData.online}}
+            <p style="color: green;">online</p>
+            {{else}}
+            <p style="color: rgb(180, 58, 10);">offline</p>
+            {{/if}}
+            <p class="card-text">{{userData.email}}</p>
+        </div>
+</div>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        {{#each users}}
+            <div class="col" id="usersPage">
+                <div>
+                    <img style="width: 74px;" src="images/user-logo.png" alt="image">
+                </div>
+                <div>
+                    <h3>{{username}}</h3>
+                    {{#if online}}
+                    <p style="color: green;">online</p>
+                    {{else}}
+                    <p style="color: red;">offline</p>
+                    {{/if}}
+                   
+                       <a href="/userProfile/{{_id}}">
+                       <button class="btn btn-success">
+                           Profile
+                           <i class='fas fa-user-alt'></i>
+                       </button>
+                       </a>
+
+                       <a href="/chatRoom/{{_id}}">
+                       <button class="btn btn-warning">
+                           Chat
+                           <i class='fab fa-rocketchat'></i>
+                       </button>
+                       </a>
+          
+                </div>
+            </div>
+        {{else}}
+        <p>Users Not Found.</p>
+        {{/each}}
+    </div>
+</div>

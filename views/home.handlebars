@@ -1,0 +1,18 @@
+<div id="form-parent">
+    <div class="form-child">
+    <form action="/login" method="post" id="login-form">
+    <h1>Social Network</h1>
+    <h2 style="color: tomato;">{{errorMessage}}</h2>
+    <h2 style="color: green;">{{success}}</h2>
+    <input type="email" name="email" id="email" placeholder="Enter your email">
+    <input type="password" name="password" id="password" placeholder="Enter your password">
+    <button id="button" type="submit">Login</button>
+    </form>
+
+    <div>
+        <a href="/signup">Need to Signup?</a>
+    <a href="/forgotPassword">Forgot password?</a>
+    </div>
+
+    </div>
+</div>

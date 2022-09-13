@@ -1,0 +1,21 @@
+<div class="container-fluid">
+
+  <div style="background-color: antiquewhite;position:relative">
+     <div style="flex-direction: row;display:flex;justify-content:space-between">
+    <h2 style="text-align:left;">{{otherUser.username}}</h2>
+    <h2 style="text-align:right;">{{currentUser.username}}</h2>
+   </div>
+
+    <input type="hidden" id="otherUserId" value="{{otherUser._id}}" >
+    <input type="hidden" id="currentUserId" value="{{currentUserId}}" >
+
+    <div id="chatRoom"></div>
+
+  </div>
+
+    <form id="form">
+        <input type="text" name="message" id="message" placeholder="Type message .." required>
+        <button id="send-btn" type="submit">Send</button>
+    </form>
+    
+</div>
