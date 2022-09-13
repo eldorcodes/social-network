@@ -488,6 +488,23 @@ app.get('/comments/:id',(req,res) => {
         })
     }).catch(e => console.log(e))
 })
+// UPDATE PASSWORD
+app.post('/updatePassword',(req,res) => {
+    console.log(req.body)
+    var salt = bcrypt.genSaltSync(10);
+    var hash = bcrypt.hashSync(req.body.password, salt);
+
+    User.findOneAndUpdate({email:req.body.email},{password:hash})
+    .then((user) => {
+        res.render('Authentication/ForgotPassword',{
+            success:'Update successful. You can login with new password'
+        })
+    }).catch((e) => {
+        res.render('Authentication/ForgotPassword',{
+            error:e.message
+        })
+    })
+})
 // listen to port
 server.listen(port,function(error){
     if (error) {
